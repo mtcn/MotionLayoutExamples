@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private val mAdapterData: Array<MainAdapter.Demo> = arrayOf(
             MainAdapter.Demo("Basic Collapsing Toolbar", ExampleTypes.DEFAULT, R.layout.collapsing_toolbar),
             MainAdapter.Demo("Collapsing Toolbar w/ Text Interpolation", ExampleTypes.DEFAULT, R.layout.collapsing_toolbar_2),
-            MainAdapter.Demo("Collapsing Toolbar w/ Cover Example", ExampleTypes.FULLSCREEN, R.layout.collapsing_toolbar_with_cover_image),
+            MainAdapter.Demo("Collapsing Toolbar w/ Cover Example", ExampleTypes.FULLSCREEN, R.layout.collapsing_toolbar_with_cover),
             MainAdapter.Demo("Basic Keyframe Example", ExampleTypes.WITHOUT_RECYCLER_VIEW, R.layout.basic_key_frame_example),
             MainAdapter.Demo("Basic Keyframe Example 2", ExampleTypes.WITHOUT_RECYCLER_VIEW, R.layout.basic_key_frame_example_2),
             MainAdapter.Demo("Notification Center Example", ExampleTypes.DEFAULT, R.layout.notification_center_example),
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun start(activity: Class<*>, layoutFileId: Int, types: ExampleTypes?, position: Int) {
-        if (position > 1) {
+        if (position > 2) {
             Toast.makeText(this, "Coming soon...", Toast.LENGTH_LONG).show()
         } else {
             val intent = Intent(this, activity).apply {

@@ -2,10 +2,14 @@ package app.layout.motion.motionlayoutexample
 
 import android.animation.ArgbEvaluator
 import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
+import android.view.View
+import android.view.WindowManager
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -13,7 +17,9 @@ class DemoActivity : AppCompatActivity(), MotionLayout.TransitionListener {
     var motionLayout: MotionLayout? = null
     var recyclerView: RecyclerView? = null
     var layout = R.layout.collapsing_toolbar
+    var exampleType = 0
     var titleTextView: TextView? = null
+    var lastProgress = 0f
     private var mArgbEvaluator = ArgbEvaluator()
     private var startColor = Color.parseColor("#f48930")
     private var endColor = Color.parseColor("#b55fa3")
@@ -22,6 +28,7 @@ class DemoActivity : AppCompatActivity(), MotionLayout.TransitionListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         layout = intent.getIntExtra("layoutId", R.layout.collapsing_toolbar)
+        exampleType = intent.getIntExtra("type", 0)
         setTheme()
         setContentView(layout)
         initViews()
@@ -33,10 +40,19 @@ class DemoActivity : AppCompatActivity(), MotionLayout.TransitionListener {
         motionLayout!!.setTransitionListener(this)
     }
 
-    private fun setTheme(){
-        //todo fullscreen
-        setTheme(R.style.LightTheme)
+    private fun setTheme() {
+        if (exampleType == ExampleTypes.FULLSCREEN.ordinal && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            window.apply {
+                addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN)
+                addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+                addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION)
+                navigationBarColor = ContextCompat.getColor(this@DemoActivity, R.color.black)
+                decorView.systemUiVisibility = 0
+            }
+        } else
+            setTheme(R.style.LightTheme)
     }
+
     private fun initViews() {
         motionLayout = findViewById(R.id.motionLayout)
         recyclerView = findViewById(R.id.recyclerView)
@@ -46,13 +62,24 @@ class DemoActivity : AppCompatActivity(), MotionLayout.TransitionListener {
         }
     }
 
-    override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, p3: Float) {
+    override fun onTransitionChange(p0: MotionLayout?, p1: Int, p2: Int, progress: Float) {
         if (p0 == null)
             return
 
         if (layout == R.layout.collapsing_toolbar_2) {
-            currentColor = mArgbEvaluator.evaluate(p3, startColor, endColor) as Int
+            currentColor = mArgbEvaluator.evaluate(progress, startColor, endColor) as Int
             titleTextView?.setTextColor(currentColor)
+        }else if (layout == R.layout.collapsing_toolbar_with_cover){
+            if (progress - lastProgress > 0 && Math.abs(progress - 1f) < 0.1f) {
+                // from start to end
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+            } else if (progress < 0.8f) {
+                // from end to start
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                    window?.decorView?.systemUiVisibility = 0
+            }
+            lastProgress = progress
         }
 
 
