@@ -30,11 +30,7 @@ class DemoActivity : AppCompatActivity(), MotionLayout.TransitionListener {
             adapter = DummyListAdapter()
             layoutManager = LinearLayoutManager(this@DemoActivity)
         }
-
         motionLayout!!.setTransitionListener(this)
-
-//        val doShowPaths = intent.getBooleanExtra("showPaths", false)
-//        (motionLayout as? MotionLayout)?.setShowPaths(doShowPaths)
     }
 
     private fun setTheme(){

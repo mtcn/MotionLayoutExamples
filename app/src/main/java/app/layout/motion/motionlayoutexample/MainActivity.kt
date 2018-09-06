@@ -3,6 +3,7 @@ package app.layout.motion.motionlayoutexample
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -39,11 +40,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun start(activity: Class<*>, layoutFileId: Int, types: ExampleTypes?) {
-        val intent = Intent(this, activity).apply {
-            putExtra("layoutId", layoutFileId)
-            putExtra("type", types?.ordinal ?: ExampleTypes.DEFAULT.ordinal)
+    fun start(activity: Class<*>, layoutFileId: Int, types: ExampleTypes?, position: Int) {
+        if (position > 1) {
+            Toast.makeText(this, "Coming soon...", Toast.LENGTH_LONG).show()
+        } else {
+            val intent = Intent(this, activity).apply {
+                putExtra("layoutId", layoutFileId)
+                putExtra("type", types?.ordinal ?: ExampleTypes.DEFAULT.ordinal)
+            }
+            startActivity(intent)
         }
-        startActivity(intent)
     }
 }

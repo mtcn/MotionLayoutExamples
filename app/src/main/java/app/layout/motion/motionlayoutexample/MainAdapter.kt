@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 
@@ -43,8 +44,9 @@ class MainAdapter(private val data: Array<MainAdapter.Demo>) : RecyclerView.Adap
             layout.setOnClickListener {
                 val context = it?.context as MainActivity
                 activity?.let {
-                    context.start(it, layoutFileId, exampleType)
+                    context.start(it, layoutFileId, exampleType, layoutPosition)
                 }
+
             }
         }
     }
