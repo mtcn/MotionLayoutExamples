@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@layout/collapsing_toolbar_2_end"
+        app:constraintSetStart="@layout/collapsing_toolbar_2"
+        app:duration="500"
+        motion:interpolator="linear">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/recyclerView"
+            app:touchAnchorSide="top" />
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="45"
+                motion:target="@id/desc" />
+
+        </KeyFrameSet>
+
+    </Transition>
+
+</MotionScene>

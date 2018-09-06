@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/motion_scene_collapsing_toolbar">
@@ -52,6 +53,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="Kotlin"
+        android:textStyle="bold"
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="19sp"
@@ -73,9 +75,9 @@
         app:layout_constraintTop_toBottomOf="@id/toolbarTitle" />
 
     <View
-        android:id="@+id/toolbarSeparator"
+        android:id="@+id/toolbarDivider"
         android:layout_width="0dp"
-        android:layout_height="1dp"
+        android:layout_height="0.5dp"
         android:layout_marginTop="10dp"
         android:background="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
@@ -89,6 +91,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbarSeparator" />
+        app:layout_constraintTop_toBottomOf="@id/toolbarDivider" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
