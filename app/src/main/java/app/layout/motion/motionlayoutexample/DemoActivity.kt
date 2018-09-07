@@ -4,6 +4,7 @@ import android.animation.ArgbEvaluator
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.view.WindowManager
 import android.widget.TextView
@@ -37,7 +38,14 @@ class DemoActivity : AppCompatActivity(), MotionLayout.TransitionListener {
             adapter = DummyListAdapter()
             layoutManager = LinearLayoutManager(this@DemoActivity)
         }
-        motionLayout!!.setTransitionListener(this)
+
+        // workaround for wrong state after view being clicked/touched on some points
+        // https://issuetracker.google.com/issues/11280555
+        motionLayout!!.transitionToEnd()
+        Handler().postDelayed({motionLayout!!.apply{
+            transitionToStart()
+            setTransitionListener(this@DemoActivity)
+        }}, 50)
     }
 
     private fun setTheme() {
