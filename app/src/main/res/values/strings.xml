@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MotionLayoutExample</string>
+    <string name="dummy_text3">23° indoor\nDoor closed</string>
 </resources>

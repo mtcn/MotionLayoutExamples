@@ -50,6 +50,7 @@ class DemoActivity : AppCompatActivity(), MotionLayout.TransitionListener {
 
     private fun setTheme() {
         if (exampleType == ExampleTypes.FULLSCREEN.ordinal && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            //todo hide navigation bar too.
             window.apply {
                 addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN)
                 addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
