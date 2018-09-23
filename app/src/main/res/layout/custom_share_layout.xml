@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#90caf9">
+
+    <ImageView
+        android:id="@+id/seenImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:tint="#ffffff"
+        app:layout_constraintEnd_toStartOf="@id/favImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_done" />
+
+    <ImageView
+        android:id="@+id/favImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:padding="1dp"
+        android:tint="#ffffff"
+        app:layout_constraintEnd_toStartOf="@id/shareImage"
+        app:layout_constraintStart_toEndOf="@id/seenImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_fav" />
+
+    <ImageView
+        android:id="@+id/shareImage"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:tint="#ffffff"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/favImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_share" />
+
+    <TextView
+        android:id="@+id/seenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="12dp"
+        android:text="SEEN"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/seenImage"
+        app:layout_constraintStart_toStartOf="@id/seenImage"
+        app:layout_constraintTop_toBottomOf="@id/seenImage" />
+
+
+    <TextView
+        android:id="@+id/favText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:text="999"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/favImage"
+        app:layout_constraintStart_toStartOf="@id/favImage"
+        app:layout_constraintTop_toBottomOf="@id/favImage" />
+
+
+    <TextView
+        android:id="@+id/shareText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="12dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:text="SHARE"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/shareImage"
+        app:layout_constraintStart_toStartOf="@id/shareImage"
+        app:layout_constraintTop_toBottomOf="@id/shareImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

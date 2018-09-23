@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cccccc"
+    android:orientation="vertical"
+    app:layoutDescription="@xml/motion_scene_multiple_animation">
+
+    <ImageView
+        android:id="@+id/coverImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/starry_night" />
+
+
+    <View
+        android:id="@+id/hamburgerBg"
+        android:background="#ffffff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp" />
+
+    <ImageView
+        android:id="@+id/hamburgerIcon"
+        app:layout_constraintTop_toTopOf="@id/hamburgerBg"
+        app:layout_constraintBottom_toBottomOf="@id/hamburgerBg"
+        app:layout_constraintStart_toStartOf="@id/hamburgerBg"
+        app:layout_constraintEnd_toEndOf="@id/hamburgerBg"
+        android:tint="#90caf9"
+        android:padding="9dp"
+        app:srcCompat="@drawable/ic_hamburger"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.29" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.32" />
+
+
+    <View
+        android:id="@+id/bgView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:text="The Starry Night"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/bgView"
+        app:layout_constraintStart_toStartOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/guideline1" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:background="#cccccc"
+        app:layout_constraintEnd_toEndOf="@id/bgView"
+        app:layout_constraintStart_toStartOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView" />
+
+    <TextView
+        android:id="@+id/descTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:text="Vincent van Gogh"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/bgView"
+        app:layout_constraintStart_toStartOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:background="#cccccc"
+        app:layout_constraintEnd_toEndOf="@id/bgView"
+        app:layout_constraintStart_toStartOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/descTextView" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="serif-monospace"
+        android:gravity="center"
+        android:text="June, 1889"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@id/bgView"
+        app:layout_constraintStart_toStartOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <include
+        android:id="@+id/shareLayout"
+        layout="@layout/custom_share_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@id/bgView"
+        app:layout_constraintStart_toStartOf="@id/bgView"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView" />
+
+    <TextView
+        android:id="@+id/contentText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:nestedScrollingEnabled="false"
+        android:padding="14dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="The Starry Night is an oil on canvas by the Dutch post-impressionist painter Vincent van Gogh. Painted in June 1889, it depicts the view from the east-facing window of his asylum room at Saint-Rémy-de-Provence, just before sunrise, with the addition of an idealized village.
+\n\n
+It has been in the permanent collection of the Museum of Modern Art in New York City since 1941, acquired through the Lillie P. Bliss Bequest. Regarded as among Van Gogh's finest works, The Starry Night is one of the most recognized paintings in the history of Western culture
+\n\n
+In the aftermath of the 23 December 1888 breakdown that resulted in the self-mutilation of his left ear,Van Gogh voluntarily admitted himself to the Saint-Paul-de-Mausole lunatic asylum on 8 May 1889. Housed in a former monastery, Saint-Paul-de-Mausole catered to the wealthy and was less than half full when Van Gogh arrived, allowing him to occupy not only a second-story bedroom but also a ground-floor room for use as a painting studio
+
+"
+        android:textSize="17sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/shareLayout" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
