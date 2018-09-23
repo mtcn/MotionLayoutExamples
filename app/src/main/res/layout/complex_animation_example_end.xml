@@ -12,7 +12,6 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +30,6 @@
         android:layout_height="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="32dp"
-        android:src="@drawable/ic_cloud"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="@id/halfScreenVertical" />
 
@@ -41,7 +39,6 @@
         android:layout_height="40dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="22dp"
-        android:src="@drawable/ic_cloud"
         app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintStart_toStartOf="@id/halfScreenVertical" />
 
@@ -52,7 +49,6 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:padding="4dp"
-        android:src="@drawable/ic_hamburger"
         android:tint="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,7 +59,6 @@
         android:layout_height="40dp"
         android:rotation="10"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_lightning_bolt"
         android:tint="#ffffff"
         app:layout_constraintStart_toEndOf="@id/mainImage"
         app:layout_constraintTop_toTopOf="@id/mainImage" />
@@ -76,7 +71,6 @@
         android:layout_marginTop="70dp"
         android:rotation="10"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_lightning_bolt"
         android:tint="#ffffff"
         app:layout_constraintStart_toEndOf="@id/mainImage"
         app:layout_constraintTop_toTopOf="@id/mainImage" />
@@ -87,7 +81,6 @@
         android:layout_height="40dp"
         android:rotation="300"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_lightning_bolt"
         android:tint="#ffffff"
         app:layout_constraintEnd_toStartOf="@id/mainImage"
         app:layout_constraintTop_toTopOf="@id/mainImage" />
@@ -100,7 +93,6 @@
         android:layout_marginEnd="30dp"
         android:rotation="300"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_lightning_bolt"
         android:tint="#ffffff"
         app:layout_constraintEnd_toStartOf="@id/mainImage"
         app:layout_constraintTop_toTopOf="@id/mainImage" />
@@ -109,8 +101,17 @@
         android:id="@+id/mainImage"
         android:layout_width="150dp"
         android:layout_height="0dp"
-        android:layout_marginTop="55dp"
-        android:src="@drawable/illustration_gman"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toTopOf="@id/dialogView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/mainImage2"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toTopOf="@id/dialogView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -202,11 +203,16 @@
         android:layout_height="150dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/rounded_bg"
         app:layout_constraintBottom_toBottomOf="@id/guideline2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/guideline2" />
+
+    <!--<app.layout.motion.motionlayoutexample.BounceHelper-->
+        <!--android:id="@+id/helper"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:constraint_referenced_ids="mainImage2" />-->
 
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
