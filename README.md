@@ -11,7 +11,8 @@ Name  | Demo
 Basic Collapsing Toolbar| <img src="/demos/basic_collapsing_toolbar_demo.gif" width="40%"> |
 Collapsing Toolbar with Text Interpolation | <img src="/demos/collapsing_toolbar_w_text_interpolation_demo.gif" width="40%"> |
 Collapsing Toolbar with Cover Image | <img src="/demos/collapsing_toolbar_w_cover_demo.gif" width="40%"> |
-Complex Animation Example <br/>inpired by:<br/> [Mi Smart Home - Outside view](https://dribbble.com/shots/5137383--Mi-Smart-Home-Outside-view-1) | <img src="/demos/complex_animation_example.gif" width="40%"> 
+Complex Animation Example <br/>inspired by:<br/> [Mi Smart Home - Outside view](https://dribbble.com/shots/5137383--Mi-Smart-Home-Outside-view-1) | <img src="/demos/complex_animation_example.gif" width="40%"> |
+Multiple Animation Example <br/>inspired by:<br/> [DailyArt App](https://play.google.com/store/apps/details?id=com.moiseum.dailyart2)| <img src="/demos/multiple_animation_example.gif" width="40%">
 
 
 ## Resources
