@@ -24,7 +24,7 @@ Multiple Animation Example <br/>inspired by:<br/> [DailyArt App](https://play.go
 
 
 ## License
-Copyright 2018 Metecan Duyal
+Copyright 2018 Burak Görmek
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
