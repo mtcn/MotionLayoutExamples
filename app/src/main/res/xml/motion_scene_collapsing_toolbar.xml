@@ -18,7 +18,7 @@
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="40"
-                motion:target="@id/toolbarDesc" />
+                motion:motionTarget="@id/toolbarDesc" />
 
         </KeyFrameSet>
 

@@ -19,68 +19,68 @@
                 android:scaleX="1"
                 android:scaleY="1"
                 motion:framePosition="0"
-                motion:target="@id/text3" />
+                motion:motionTarget="@id/text3" />
 
             <KeyAttribute
                 android:scaleX="1.1"
                 android:scaleY="1.1"
                 motion:framePosition="50"
-                motion:target="@id/text3" />
+                motion:motionTarget="@id/text3" />
 
             <KeyAttribute
                 android:scaleX="1"
                 android:scaleY="1"
                 motion:framePosition="100"
-                motion:target="@id/text3" />
+                motion:motionTarget="@id/text3" />
 
             <KeyAttribute
                 android:scaleX="1"
                 android:scaleY="1"
                 motion:framePosition="0"
-                motion:target="@id/text1" />
+                motion:motionTarget="@id/text1" />
 
             <KeyAttribute
                 android:scaleX="1.1"
                 android:scaleY="1.1"
                 motion:framePosition="50"
-                motion:target="@id/text1" />
+                motion:motionTarget="@id/text1" />
 
             <KeyAttribute
                 android:scaleX="1"
                 android:scaleY="1"
                 motion:framePosition="100"
-                motion:target="@id/text1" />
+                motion:motionTarget="@id/text1" />
 
 
             <KeyAttribute
                 android:scaleX="1"
                 android:scaleY="1"
                 motion:framePosition="0"
-                motion:target="@id/text2" />
+                motion:motionTarget="@id/text2" />
 
             <KeyAttribute
                 android:scaleX="1.1"
                 android:scaleY="1.1"
                 motion:framePosition="50"
-                motion:target="@id/text2" />
+                motion:motionTarget="@id/text2" />
 
             <KeyAttribute
                 android:scaleX="1"
                 android:scaleY="1"
                 motion:framePosition="100"
-                motion:target="@id/text2" />
+                motion:motionTarget="@id/text2" />
 
             <!--<KeyAttribute-->
                 <!--android:scaleX="1.1"-->
                 <!--android:scaleY="1.1"-->
                 <!--motion:framePosition="95"-->
-                <!--motion:target="@id/mainImage2" />-->
+                <!--motion:motionTarget="@id/mainImage2" />-->
 
             <!--<KeyAttribute-->
                 <!--android:scaleX="1"-->
                 <!--android:scaleY="1"-->
                 <!--motion:framePosition="100"-->
-                <!--motion:target="@id/mainImage2" />-->
+                <!--motion:motionTarget="@id/mainImage2" />-->
 
 
         </KeyFrameSet>

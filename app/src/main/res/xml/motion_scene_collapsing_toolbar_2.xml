@@ -7,7 +7,7 @@
         app:constraintSetEnd="@layout/collapsing_toolbar_2_end"
         app:constraintSetStart="@layout/collapsing_toolbar_2"
         app:duration="500"
-        motion:interpolator="linear">
+        motion:motionInterpolator="linear">
 
         <OnSwipe
             app:dragDirection="dragUp"
@@ -19,7 +19,7 @@
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="45"
-                motion:target="@id/desc" />
+                motion:motionTarget="@id/desc" />
 
         </KeyFrameSet>
 

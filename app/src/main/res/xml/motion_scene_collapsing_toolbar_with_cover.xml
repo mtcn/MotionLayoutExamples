@@ -18,38 +18,38 @@
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="70"
-                motion:target="@id/title" />
+                motion:motionTarget="@id/title" />
 
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="80"
-                motion:target="@id/toolbarIconContainer" />
+                motion:motionTarget="@id/toolbarIconContainer" />
 
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="70"
-                motion:target="@id/backButton" />
+                motion:motionTarget="@id/backButton" />
 
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="70"
-                motion:target="@id/backButton2" />
+                motion:motionTarget="@id/backButton2" />
 
 
             <KeyAttribute
                 android:alpha="1"
                 motion:framePosition="90"
-                motion:target="@id/backButton2" />
+                motion:motionTarget="@id/backButton2" />
 
             <KeyAttribute
                 android:alpha="0"
                 motion:framePosition="70"
-                motion:target="@id/toolbarTitle" />
+                motion:motionTarget="@id/toolbarTitle" />
 
             <KeyAttribute
                 android:alpha="1"
                 motion:framePosition="90"
-                motion:target="@id/toolbarTitle" />
+                motion:motionTarget="@id/toolbarTitle" />
 
         </KeyFrameSet>
 
